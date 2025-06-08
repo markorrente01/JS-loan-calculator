@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="images/loan-favicon.png" type="image/png">
     <title>Loan Calculator</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <main>
@@ -18,7 +19,7 @@
                         <path d="M441-120v-86q-53-12-91.5-46T293-348l74-30q15 48 44.5 73t77.5 25q41 0 69.5-18.5T587-356q0-35-22-55.5T463-458q-86-27-118-64.5T313-614q0-65 42-101t86-41v-84h80v84q50 8 82.5 36.5T651-650l-74 32q-12-32-34-48t-60-16q-44 0-67 19.5T393-614q0 33 30 52t104 40q69 20 104.5 63.5T667-358q0 71-42 108t-104 46v84h-80Z"/>
                     </svg>
                 </label>
-                <input type="number" id="loan__amount" placeholder="Loan Amount">
+                <input type="number" id="loan__amount" placeholder="Loan Amount" required>
                 </div>
                 
                 <div class="wrapper">
@@ -27,7 +28,7 @@
                         <path d="M300-520q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T360-660q0-25-17.5-42.5T300-720q-25 0-42.5 17.5T240-660q0 25 17.5 42.5T300-600Zm360 440q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T720-300q0-25-17.5-42.5T660-360q-25 0-42.5 17.5T600-300q0 25 17.5 42.5T660-240Zm-444 80-56-56 584-584 56 56-584 584Z"/>
                     </svg>
                 </label>
-                <input type="number" id="loan__interest" placeholder="Interest">
+                <input type="number" id="loan__interest" placeholder="Interest" required>
                 </div>
 
                 <div class="wrapper">
@@ -36,11 +37,18 @@
                         <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm80 240v-80h400v80H280Zm0 160v-80h280v80H280Z"/>
                     </svg>
                 </label>
-                <input type="number" id="years" placeholder="Years To Payback">
+                <input type="number" id="years" placeholder="Years To Payback" required>
                 </div>
 
                 <input type="submit" value="Calculate">
             </form>
+        </section>
+
+        <section class="loadingAnimation">
+            <div class="progress">
+                <div class="progress__animation"></div>
+            </div>
+            <p id="loadText">Calculating....</p>
         </section>
 
         <section class="results">
@@ -57,7 +65,7 @@
 
             <div class="wrapper">
                 <label for="total__interest">Total Interest</label>
-                <input type="number" id="total__interest" disabled>
+                <input type="number" id="total__interest" disabled title="none">
             </div>
         </section>
     </main>

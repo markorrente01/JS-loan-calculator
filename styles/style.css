@@ -123,6 +123,28 @@ main {
   background: rgb(30, 64, 175);
 }
 
+.loadingAnimation {
+  font-size: 0.8rem;
+  display: none;
+}
+
+.progress {
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 7px;
+  text-align: center;
+}
+
+.progress__animation {
+  width: 1%;
+  background-color: rgb(30, 64, 175);
+  height: 100%;
+  padding: 0.5rem 0;
+  border-radius: inherit;
+  transition: width 0.3s linear;
+}
+
 input {
   width: 100%;
   border: 1px solid rgb(209, 213, 219);
@@ -134,6 +156,10 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.results {
+  display: none;
 }
 
 .results label {
@@ -153,6 +179,18 @@ input[type=number]::-webkit-outer-spin-button {
 .results input {
   padding: 0.4rem 0;
   font-size: 0.8rem;
+}
+
+#monthly__payment {
+  padding-left: 7.5rem;
+}
+
+#total__payment {
+  padding-left: 6.5rem;
+}
+
+#total__interest {
+  padding-left: 6rem;
 }
 
 .results h2 {
