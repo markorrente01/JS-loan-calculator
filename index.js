@@ -3,34 +3,37 @@ document.querySelector('form').addEventListener('submit', (e)=>{
     loadAnimation();
     const success = calculateLoan();
     if (success) {
-        document.querySelector('.loadingAnimation').style.display = 'block';
-        let a = setTimeout(()=>{
-        document.querySelector('.loadingAnimation').style.display = 'none';
-    document.querySelector('.results').style.display = 'block';
-    clearTimeout(a)
+        const loadingAnimationBlock = document.querySelector('.loadingAnimation');
+        loadingAnimationBlock.style.display = 'block';
+
+    const resultsBlock = document.querySelector('.results');
+        resultsBlock.style.display = 'none';
+
+    const a = setTimeout(()=>{
+        loadingAnimationBlock.style.display = 'none';
+        resultsBlock.style.display = 'block';
+        clearTimeout(a)
     }, 1500)
-    }
-    
+    }    
 })
 let animating = false;
 function loadAnimation() {
-    if (!animating) {
+    if (animating) return; {
         animating = true;
         const progressAnimation = document.querySelector('.progress__animation');
-        let width = 1;
+            progressAnimation.style.width = '0%';
+        let width = 0;
         const id = setInterval(()=>{
             if (width>=100) {
-        clearInterval(id);
-        if (width>=90) {
-            document.getElementById('loadText').textContent = 'Complete!'
-        }
-        animating = false;
+                clearInterval(id);
+                animating = false;
             } else {
                 width++
                 progressAnimation.style.width = `${width}%`
             }
                 }, 10)
-            } 
+            }
+            
 }
 function calculateLoan() {
     // get the required user inputs fields
@@ -59,11 +62,9 @@ function calculateLoan() {
         console.log('please enter valid positive numbers.')
         return false;
     }
-
     // display the results using 2 decimals places
     document.getElementById('monthly__payment').value = monthlyPayment.toFixed(2)
     document.getElementById('total__payment').value = totalPayment.toFixed(2)
     document.getElementById('total__interest').value = totalInterest.toFixed(2)
     return true;
 }
-
