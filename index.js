@@ -52,9 +52,9 @@ function calculateLoan() {
         return false;
     }
     // display the results using 2 decimals places
-    document.getElementById('monthly__payment').value = monthlyPayment.toFixed(2)
-    document.getElementById('total__payment').value = totalPayment.toFixed(2)
-    document.getElementById('total__interest').value = totalInterest.toFixed(2)
+    document.getElementById('monthly__payment').textContent = `${monthlyPayment.toFixed(2)}`;
+    document.getElementById('total__payment').textContent = `${totalPayment.toFixed(2)}`;
+    document.getElementById('total__interest').textContent = `${totalInterest.toFixed(2)}`;
     return true;
 }
 function handleDisplay() {

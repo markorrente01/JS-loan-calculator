@@ -71,7 +71,6 @@ body {
 
 main {
   background-color: rgb(255, 255, 255);
-  text-align: center;
   padding: 1.5rem 1.2rem;
   width: 43.75rem;
   border-radius: 25px;
@@ -85,6 +84,7 @@ main {
 .main__form h1 {
   font-size: 1.5rem;
   margin-bottom: 0.625rem;
+  text-align: center;
 }
 
 .wrapper {
@@ -111,21 +111,24 @@ main {
   font-size: 0.8rem;
 }
 
-.main__form input[type=submit] {
+.main__form button {
   padding: 0.5rem 0;
   font-size: 0.9rem;
   border: none;
   color: rgb(255, 255, 255);
   background: rgb(37, 99, 235);
   transition: 0.2s linear;
+  width: 100%;
+  border-radius: 7px;
 }
-.main__form input[type=submit]:hover {
+.main__form button:hover {
   background: rgb(30, 64, 175);
 }
 
 .loadingAnimation {
   font-size: 0.8rem;
   display: none;
+  text-align: center;
 }
 
 .progress {
@@ -175,18 +178,22 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 0 0.5rem;
 }
 
-.results input {
-  padding: 0.4rem 0;
+#monthly__payment, #total__payment, #total__interest {
+  padding: 0.3rem 0;
   font-size: 0.8rem;
   font-weight: 500;
+  width: 100%;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 7px;
+  height: 38.5px;
 }
 
 #monthly__payment {
-  padding-left: 7.5rem;
+  padding-left: 7.8rem;
 }
 
 #total__payment {
-  padding-left: 6.5rem;
+  padding-left: 6.3rem;
 }
 
 #total__interest {
@@ -196,6 +203,7 @@ input[type=number]::-webkit-outer-spin-button {
 .results h2 {
   font-size: 1.1rem;
   margin-bottom: 0.625rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 58.438rem) {
@@ -215,21 +223,5 @@ input[type=number]::-webkit-outer-spin-button {
   body {
     display: grid;
     place-content: unset;
-  }
-  .main__form input[type=submit] {
-    border-radius: 5px;
-    font-size: 0.75rem;
-  }
-  .results input {
-    font-weight: 500;
-  }
-  #monthly__payment {
-    padding-left: 7.4rem;
-  }
-  #total__payment {
-    padding-left: 6.4rem;
-  }
-  #total__interest {
-    padding-left: 5.9rem;
   }
 }/*# sourceMappingURL=style.css.map */
