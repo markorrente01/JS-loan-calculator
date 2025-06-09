@@ -103,6 +103,7 @@ input[type=number]::-webkit-outer-spin-button {
 .results input{
     padding: .4rem 0;
     font-size: .8rem;
+    font-weight: 500;
 }
 #monthly__payment{
     padding-left: 7.5rem;
@@ -136,5 +137,20 @@ body{
     display: grid;
     place-content: unset;
     
+}
+}
+@media screen and (max-width: 23.438rem){
+  .main__form input[type="submit"]{
+    border-radius: 5px;
+    font-size: .75rem;
+  }
+  #monthly__payment{
+    padding-left: 7.85rem;
+}
+#total__payment{
+    padding-left: 6.85rem;
+}
+#total__interest{
+    padding-left: 6.5rem;
 }
 }
