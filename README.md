@@ -33,6 +33,13 @@
 
 In this mini-project i learnt how to create a progress bar with javascript.
 
+```html
+<div class="progress">
+                <div class="progress__animation"></div>
+            </div>
+            <p id="loadText">Calculating....</p>
+```
+
 ```js
 let animating = false;
 function loadAnimation() {
