@@ -1,5 +1,5 @@
 ![preview](/images/preview-loanCalculator.png)
-# simple todo-list
+# Loan Calculator Built with JS.
 
 ## Contents
 
