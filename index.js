@@ -3,17 +3,7 @@ document.querySelector('form').addEventListener('submit', (e)=>{
     loadAnimation();
     const success = calculateLoan();
     if (success) {
-        const loadingAnimationBlock = document.querySelector('.loadingAnimation');
-        loadingAnimationBlock.style.display = 'block';
-
-    const resultsBlock = document.querySelector('.results');
-        resultsBlock.style.display = 'none';
-
-    const a = setTimeout(()=>{
-        loadingAnimationBlock.style.display = 'none';
-        resultsBlock.style.display = 'block';
-        clearTimeout(a)
-    }, 1500)
+        handleDisplay();
     }    
 })
 let animating = false;
@@ -32,8 +22,7 @@ function loadAnimation() {
                 progressAnimation.style.width = `${width}%`
             }
                 }, 10)
-            }
-            
+            } 
 }
 function calculateLoan() {
     // get the required user inputs fields
@@ -67,4 +56,18 @@ function calculateLoan() {
     document.getElementById('total__payment').value = totalPayment.toFixed(2)
     document.getElementById('total__interest').value = totalInterest.toFixed(2)
     return true;
+}
+function handleDisplay() {
+    const loadingAnimationBlock = document.querySelector('.loadingAnimation');
+        loadingAnimationBlock.style.display = 'block';
+
+    const resultsBlock = document.querySelector('.results');
+        resultsBlock.style.display = 'none';
+
+    const a = setTimeout(()=>{
+        loadingAnimationBlock.style.display = 'none';
+        resultsBlock.style.display = 'block';
+        clearTimeout(a)
+    }, 1500)
+    return a;
 }

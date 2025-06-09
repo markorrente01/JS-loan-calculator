@@ -131,26 +131,27 @@ input[type=number]::-webkit-outer-spin-button {
 }
 @media screen and (max-width: 33.125rem){
     main{
-    width: 100%;
-}
-body{
-    display: grid;
-    place-content: unset;
-    
-}
-}
-@media screen and (max-width: 23.438rem){
-  .main__form input[type="submit"]{
-    border-radius: 5px;
-    font-size: .75rem;
-  }
-  #monthly__payment{
-    padding-left: 7.85rem;
-}
-#total__payment{
-    padding-left: 6.85rem;
-}
-#total__interest{
-    padding-left: 6.5rem;
-}
+        width: 100%;
+    }
+    body{
+        display: grid;
+        place-content: unset;
+        
+    }
+    .main__form input[type="submit"]{
+        border-radius: 5px;
+        font-size: .75rem;
+    }
+    .results input{
+        font-weight: 500;
+    }
+    #monthly__payment{
+        padding-left: 8rem;
+    }
+    #total__payment{
+        padding-left: 7rem;
+    }
+    #total__interest{
+        padding-left: 6.9rem;
+    }
 }
